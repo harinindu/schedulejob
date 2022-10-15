@@ -8,8 +8,10 @@ jobs:
   build:
     name: Trigger Site Rebuild
     runs-on: ubuntu-latest
+    env:
+      JOB_NAME: Hello Test
     steps:
       - name: cURL request
         # Hit the webhook endpoint to rebuild  from the "main" branch
         #run: curl -X POST -d {} https://<webhook-endpoint-url>
-        run: echo Hello Cron!
+        run: echo "$JOB_NAME"!
