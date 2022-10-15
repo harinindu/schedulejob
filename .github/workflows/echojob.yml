@@ -2,7 +2,7 @@ name: Trigger a CRON Schedule
 
 on:
   schedule:
-    # Runs "every 1oth min" (see https://crontab.guru)
+    # Runs "every 10th min" (see https://crontab.guru)
     - cron: '*/10 * * * *'
 jobs:
   build:
